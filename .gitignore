@@ -1,0 +1,24 @@
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.env
+*.egg-info/
+dist/
+build/
+
+# Pipeline scripts (keep local, not needed for GitHub Pages)
+*.py
+*.txt
+*.md
+!README.md
+
+# Rockstar wallpaper archive
+GTAVI_Artwork_Wallpapers
+assets/wallpapers/
+
+# Analysis docs
+*.pdf
+
+# Product context
+PRODUCT.md
