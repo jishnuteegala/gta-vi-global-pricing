@@ -52,7 +52,6 @@
 <body>
   <div class="bg-parallax" aria-hidden="true"></div>
   <div class="content-wrap max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12" role="main">
-    <!-- Header -->
     <header class="rise" style="animation-delay: 0s;">
       <div class="flex items-center gap-4 mb-3">
         <span class="text-lg font-semibold tracking-widest" style="font-family:'DM Mono',monospace;color:#e8b84b">VI</span>
@@ -69,48 +68,43 @@
       </p>
     </header>
 
-    <!-- Summary row -->
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 my-8">
-        <div class="card px-4 py-3 rise" style="animation-delay: 0.05s;">
-          <div class="text-[10px] font-semibold uppercase tracking-[0.12em]" style="color:#999999">Countries</div>
-          <div class="text-2xl font-bold text-text tabular mt-0.5">73</div>
-
-        </div>
-        <div class="card px-4 py-3 rise" style="animation-delay: 0.1s;">
-          <div class="text-[10px] font-semibold uppercase tracking-[0.12em]" style="color:#999999">Live</div>
-          <div class="text-2xl font-bold tabular mt-0.5" style="color:#4ade80">62</div>
-        </div>
-        <div class="card px-4 py-3 rise" style="animation-delay: 0.15s;">
-          <div class="text-[10px] font-semibold uppercase tracking-[0.12em]" style="color:#999999">Pending</div>
-          <div class="text-2xl font-bold tabular mt-0.5" style="color:#e8b84b">0</div>
-        </div>
-        <div class="card px-4 py-3 rise" style="animation-delay: 0.2s;">
-          <div class="text-[10px] font-semibold uppercase tracking-[0.12em]" style="color:#999999">Unavailable</div>
-          <div class="text-2xl font-bold tabular mt-0.5" style="color:#555555">11</div>
-        </div>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 my-8">
+      <div class="card px-4 py-3 rise" style="animation-delay: 0.05s;">
+        <div class="text-[10px] font-semibold uppercase tracking-[0.12em]" style="color:#999999">Countries</div>
+        <div class="text-2xl font-bold text-text tabular mt-0.5" id="statTotal">—</div>
       </div>
-
-    <!-- Cheapest / Priciest -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
-        <div class="card px-4 py-3 rise" style="animation-delay: 0.25s;border-color:rgba(74,222,128,0.2);">
-          <div class="text-[10px] font-semibold uppercase tracking-[0.12em]" style="color:#4ade80">Cheapest (Standard)</div>
-          <div class="text-xl font-bold tabular mt-0.5" style="color:#4ade80">South Korea &mdash; US$58.19</div>
-          <div class="text-sm mt-0.5" style="color:#999999">27.3% below US baseline</div>
-        </div>
-        <div class="card px-4 py-3 rise" style="animation-delay: 0.3s;border-color:rgba(232,184,75,0.2);">
-          <div class="text-[10px] font-semibold uppercase tracking-[0.12em]" style="color:#e8b84b">Priciest (Standard)</div>
-          <div class="text-xl font-bold tabular mt-0.5" style="color:#e8b84b">Israel &mdash; US$107.09</div>
-          <div class="text-sm mt-0.5" style="color:#999999">33.9% above US baseline</div>
-        </div>
+      <div class="card px-4 py-3 rise" style="animation-delay: 0.1s;">
+        <div class="text-[10px] font-semibold uppercase tracking-[0.12em]" style="color:#999999">Live</div>
+        <div class="text-2xl font-bold tabular mt-0.5" style="color:#4ade80" id="statLive">—</div>
       </div>
+      <div class="card px-4 py-3 rise" style="animation-delay: 0.15s;">
+        <div class="text-[10px] font-semibold uppercase tracking-[0.12em]" style="color:#999999">Pending</div>
+        <div class="text-2xl font-bold tabular mt-0.5" style="color:#e8b84b" id="statPending">—</div>
+      </div>
+      <div class="card px-4 py-3 rise" style="animation-delay: 0.2s;">
+        <div class="text-[10px] font-semibold uppercase tracking-[0.12em]" style="color:#999999">Unavailable</div>
+        <div class="text-2xl font-bold tabular mt-0.5" style="color:#555555" id="statUnavail">—</div>
+      </div>
+    </div>
 
-    <!-- Interactive Chart -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+      <div class="card px-4 py-3 rise" style="animation-delay: 0.25s;border-color:rgba(74,222,128,0.2);">
+        <div class="text-[10px] font-semibold uppercase tracking-[0.12em]" style="color:#4ade80">Cheapest (Standard)</div>
+        <div class="text-xl font-bold tabular mt-0.5" style="color:#4ade80" id="statCheapest">—</div>
+        <div class="text-sm mt-0.5" style="color:#999999" id="statCheapestPct"></div>
+      </div>
+      <div class="card px-4 py-3 rise" style="animation-delay: 0.3s;border-color:rgba(232,184,75,0.2);">
+        <div class="text-[10px] font-semibold uppercase tracking-[0.12em]" style="color:#e8b84b">Priciest (Standard)</div>
+        <div class="text-xl font-bold tabular mt-0.5" style="color:#e8b84b" id="statPriciest">—</div>
+        <div class="text-sm mt-0.5" style="color:#999999" id="statPriciestPct"></div>
+      </div>
+    </div>
+
     <div class="card p-4 sm:p-6 mb-4 rise" style="animation-delay: 0.35s;">
       <div class="flex flex-wrap items-center justify-between gap-3 mb-5">
         <h2 class="text-sm font-semibold text-text">Standard vs Ultimate &mdash; Live Regions (US$)</h2>
-        <span class="text-xs text-muted tabular" id="chartCount" role="status" aria-live="polite">24 countries selected</span>
+        <span class="text-xs text-muted tabular" id="chartCount" role="status" aria-live="polite">0 countries selected</span>
       </div>
-
       <div class="flex flex-wrap gap-2 mb-5">
         <button data-preset="all" class="filter-btn text-xs font-medium px-3 py-1.5 rounded-md" style="background:rgba(232,184,75,0.12);color:#e8b84b;border:1px solid rgba(232,184,75,0.3)" aria-pressed="false">All Live</button>
         <button data-preset="default" class="filter-btn text-xs font-medium px-3 py-1.5 rounded-md" style="background:var(--surface-2);color:var(--muted);border:1px solid var(--border)" aria-pressed="true">Default</button>
@@ -119,25 +113,26 @@
         <button data-preset="apac" class="filter-btn text-xs font-medium px-3 py-1.5 rounded-md" style="background:var(--surface-2);color:var(--muted);border:1px solid var(--border)" aria-pressed="false">Asia Pacific</button>
         <button data-preset="americas" class="filter-btn text-xs font-medium px-3 py-1.5 rounded-md" style="background:var(--surface-2);color:var(--muted);border:1px solid var(--border)" aria-pressed="false">Americas</button>
       </div>
-
       <div class="relative h-80 w-full">
         <canvas id="mainChart"></canvas>
         <div id="mainChartEmpty" class="absolute inset-0 flex items-center justify-center text-sm" style="color:var(--muted);display:none;">Select countries above to compare pricing</div>
       </div>
-
       <div class="mt-5 pt-5" style="border-top:1px solid var(--border);">
         <div class="text-xs font-medium mb-2.5" style="color:#999999">Toggle countries:</div>
         <div class="flex flex-wrap gap-x-5 gap-y-2" id="checkboxContainer"></div>
       </div>
     </div>
 
-    <!-- Variance chart -->
     <div class="card p-4 sm:p-6 mb-6 rise" style="animation-delay: 0.4s;">
       <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
         <h2 class="text-sm font-semibold text-text">Variance from Baseline</h2>
-        <div class="flex gap-2">
+        <div class="flex flex-wrap gap-2 items-center">
           <button id="varStdBtn" class="filter-btn text-xs font-medium px-3 py-1.5 rounded-md" style="background:rgba(232,184,75,0.12);color:#e8b84b;border:1px solid rgba(232,184,75,0.3)">vs Standard (US$79.99)</button>
           <button id="varUltBtn" class="filter-btn text-xs font-medium px-3 py-1.5 rounded-md" style="background:var(--surface-2);color:var(--muted);border:1px solid var(--border)">vs Ultimate (US$99.99)</button>
+          <span class="text-xs" style="color:var(--muted);margin-left:4px">Sort:</span>
+          <button id="varSortDynamicBtn" class="filter-btn text-xs font-medium px-3 py-1.5 rounded-md" style="background:rgba(232,184,75,0.12);color:#e8b84b;border:1px solid rgba(232,184,75,0.3)">Dynamic</button>
+          <button id="varSortStdBtn" class="filter-btn text-xs font-medium px-3 py-1.5 rounded-md" style="background:var(--surface-2);color:var(--muted);border:1px solid var(--border)">Standard</button>
+          <button id="varSortUltBtn" class="filter-btn text-xs font-medium px-3 py-1.5 rounded-md" style="background:var(--surface-2);color:var(--muted);border:1px solid var(--border)">Ultimate</button>
         </div>
       </div>
       <div class="relative h-64 w-full">
@@ -146,13 +141,11 @@
       </div>
     </div>
 
-    <!-- Full table -->
     <div class="card rise" style="animation-delay: 0.45s;">
       <div class="px-4 sm:px-6 py-3.5 flex items-center justify-between" style="border-bottom:1px solid var(--border);">
         <h2 class="text-sm font-semibold text-text">All Countries</h2>
-        <span class="text-xs text-muted tabular" id="tableCount" role="status" aria-live="polite">73 entries</span>
+        <span class="text-xs text-muted tabular" id="tableCount" role="status" aria-live="polite">0 entries</span>
       </div>
-
       <div class="px-4 sm:px-6 py-3 flex flex-wrap gap-3 items-center" style="border-bottom:1px solid var(--border);">
         <input type="search" id="tableSearch" placeholder="Search countries..." aria-label="Search countries" class="bg-surface-2 border border-border rounded-md px-3 py-1.5 text-xs text-text placeholder:text-muted/50 focus:outline-none w-48" style="background:var(--surface-2);border:1px solid var(--border);color:var(--text);">
         <select id="statusFilter" aria-label="Filter by status" class="bg-surface-2 border border-border rounded-md px-3 py-1.5 text-xs focus:outline-none cursor-pointer" style="background:var(--surface-2);border:1px solid var(--border);color:var(--text);">
@@ -163,7 +156,6 @@
         </select>
         <button id="resetSort" class="text-xs" style="color:var(--muted);margin-left:auto;">Reset sort</button>
       </div>
-
       <div class="overflow-x-auto">
         <table class="min-w-full text-sm" id="regionTable" aria-label="GTA VI pricing by country">
           <thead>
@@ -185,7 +177,6 @@
       </div>
     </div>
 
-    <!-- Exchange Rates -->
     <div class="card mt-6 rise" style="animation-delay: 0.5s;">
       <div class="px-4 sm:px-6 py-3.5" style="border-bottom:1px solid var(--border);">
         <h2 class="text-sm font-semibold text-text">Exchange Rates Used</h2>
@@ -199,34 +190,7 @@
               <th scope="col" class="py-3 px-4 text-xs font-medium tabular text-right" style="color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;">1 Local =</th>
             </tr>
           </thead>
-                    <tbody>
-            <tr style="border-bottom:1px solid var(--border);"><td class="py-2 px-4 font-medium text-text">AUD</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">1.451</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">US$0.6890</td></tr>
-            <tr style="border-bottom:1px solid var(--border);background:var(--surface-2);"><td class="py-2 px-4 font-medium text-text">BRL</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">5.214</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">US$0.1918</td></tr>
-            <tr style="border-bottom:1px solid var(--border);"><td class="py-2 px-4 font-medium text-text">CAD</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">1.425</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">US$0.7020</td></tr>
-            <tr style="border-bottom:1px solid var(--border);background:var(--surface-2)"><td class="py-2 px-4 font-medium text-text">CHF</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">0.813</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">US$1.2297</td></tr>
-            <tr style="border-bottom:1px solid var(--border);"><td class="py-2 px-4 font-medium text-text">CZK</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">21.413</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">US$0.0467</td></tr>
-            <tr style="border-bottom:1px solid var(--border);background:var(--surface-2);"><td class="py-2 px-4 font-medium text-text">DKK</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">6.592</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">US$0.1517</td></tr>
-            <tr style="border-bottom:1px solid var(--border);"><td class="py-2 px-4 font-medium text-text">EUR</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">0.882</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">US$1.1341</td></tr>
-            <tr style="border-bottom:1px solid var(--border);background:var(--surface-2);"><td class="py-2 px-4 font-medium text-text">GBP</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">0.760</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">US$1.3155</td></tr>
-            <tr style="border-bottom:1px solid var(--border);"><td class="py-2 px-4 font-medium text-text">HKD</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">7.843</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">US$0.1275</td></tr>
-            <tr style="border-bottom:1px solid var(--border);"><td class="py-2 px-4 font-medium text-text">HUF</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">313</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">US$0.0032</td></tr>
-            <tr style="border-bottom:1px solid var(--border);background:var(--surface-2);"><td class="py-2 px-4 font-medium text-text">IDR</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">17,857</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">US$0.000056</td></tr>
-            <tr style="border-bottom:1px solid var(--border);"><td class="py-2 px-4 font-medium text-text">ILS</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">2.979</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">US$0.3357</td></tr>
-            <tr style="border-bottom:1px solid var(--border);background:var(--surface-2);"><td class="py-2 px-4 font-medium text-text">INR</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">94.340</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">US$0.0106</td></tr>
-            <tr style="border-bottom:1px solid var(--border);"><td class="py-2 px-4 font-medium text-text">JPY</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">161.290</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">US$0.006200</td></tr>
-            <tr style="border-bottom:1px solid var(--border);background:var(--surface-2);"><td class="py-2 px-4 font-medium text-text">KRW</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">1,543</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">US$0.000648</td></tr>
-            <tr style="border-bottom:1px solid var(--border);"><td class="py-2 px-4 font-medium text-text">MYR</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">4.117</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">US$0.2429</td></tr>
-            <tr style="border-bottom:1px solid var(--border);background:var(--surface-2);"><td class="py-2 px-4 font-medium text-text">NOK</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">9.891</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">US$0.1011</td></tr>
-            <tr style="border-bottom:1px solid var(--border);"><td class="py-2 px-4 font-medium text-text">NZD</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">1.775</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">US$0.5635</td></tr>
-            <tr style="border-bottom:1px solid var(--border);background:var(--surface-2);"><td class="py-2 px-4 font-medium text-text">PLN</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">3.781</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">US$0.2645</td></tr>
-            <tr style="border-bottom:1px solid var(--border);"><td class="py-2 px-4 font-medium text-text">RON</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">4.613</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">US$0.2168</td></tr>
-            <tr style="border-bottom:1px solid var(--border);background:var(--surface-2);"><td class="py-2 px-4 font-medium text-text">SEK</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">9.766</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">US$0.1024</td></tr>
-            <tr style="border-bottom:1px solid var(--border);"><td class="py-2 px-4 font-medium text-text">SGD</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">1.298</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">US$0.7705</td></tr>
-            <tr style="border-bottom:1px solid var(--border);background:var(--surface-2);"><td class="py-2 px-4 font-medium text-text">THB</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">33.445</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">US$0.0299</td></tr>
-            <tr style="border-bottom:1px solid var(--border);"><td class="py-2 px-4 font-medium text-text">TRY</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">46.512</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">US$0.0215</td></tr>
-            <tr style="border-bottom:1px solid var(--border);background:var(--surface-2);"><td class="py-2 px-4 font-medium text-text">UAH</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">45.045</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">US$0.0222</td></tr>
-            <tr style="border-bottom:1px solid var(--border);"><td class="py-2 px-4 font-medium text-text">ZAR</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">16.584</td><td class="py-2 px-4 tabular text-right" style="color:var(--muted);">US$0.0603</td></tr>
-          </tbody>
+          <tbody id="ratesBody"></tbody>
         </table>
       </div>
       <div class="px-4 sm:px-6 py-2.5 text-xs" style="color:#999999;">
@@ -236,7 +200,6 @@
       </div>
     </div>
 
-    <!-- Footer -->
     <footer class="mt-10 pt-5 text-xs text-center" style="border-top:1px solid var(--border);color:#999999;">
       <p>Built by Jishnu Teegala — <a href="https://x.com/jishnuteegala" target="_blank" rel="noopener">X</a> · <a href="https://github.com/jishnuteegala" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/jishnu-teegala/" target="_blank" rel="noopener">LinkedIn</a></p>
       <p class="mt-2">See the post on <a href="https://x.com/jishnuteegala/status/2070129871431377054" target="_blank" rel="noopener">X</a> · <a href="https://www.linkedin.com/posts/jishnu-teegala_gtavi-grandtheftauto-playstation-activity-7475898525550305280-BoOD" target="_blank" rel="noopener">LinkedIn</a></p>
@@ -247,385 +210,6 @@
     </footer>
   </div>
 
-  <script>
-    // ═══════════════════════════════════════════════════════════════
-    //  DATA
-    // ═══════════════════════════════════════════════════════════════
-
-    const REGIONS = [
-      { group:'Live',name:'Argentina',currency:'USD',status:'Live',std:79.99,ult:99.99,stdUSD:79.99,ultUSD:99.99,stores:[{slug:'es-ar',url:'https://store.playstation.com/es-ar/concept/10000730'}] },
-      { group:'Live',name:'Australia',currency:'AUD',status:'Live',std:129.95,ult:159.95,stdUSD:89.54,ultUSD:110.21,stores:[{slug:'en-au',url:'https://store.playstation.com/en-au/concept/10000730'}] },
-      { group:'Live',name:'Austria',currency:'EUR',status:'Live',std:79.99,ult:99.99,stdUSD:90.72,ultUSD:113.40,stores:[{slug:'de-at',url:'https://store.playstation.com/de-at/concept/10000730'}] },
-      { group:'Live',name:'Belgium',currency:'EUR',status:'Live',std:79.99,ult:99.99,stdUSD:90.72,ultUSD:113.40,stores:[{slug:'fr-be',url:'https://store.playstation.com/fr-be/concept/10000730'},{slug:'nl-be',url:'https://store.playstation.com/nl-be/concept/10000730'}] },
-      { group:'Live',name:'Bolivia',currency:'USD',status:'Live',std:79.99,ult:99.99,stdUSD:79.99,ultUSD:99.99,stores:[{slug:'es-bo',url:'https://store.playstation.com/es-bo/concept/10000730'}] },
-      { group:'Live',name:'Brazil',currency:'BRL',status:'Live',std:449.90,ult:549.90,stdUSD:86.29,ultUSD:105.47,stores:[{slug:'pt-br',url:'https://store.playstation.com/pt-br/concept/10000730'}] },
-      { group:'Live',name:'Bulgaria',currency:'EUR',status:'Live',std:79.99,ult:99.99,stdUSD:90.72,ultUSD:113.40,stores:[{slug:'en-bg',url:'https://store.playstation.com/en-bg/concept/10000730'},{slug:'bg-bg',url:'https://store.playstation.com/bg-bg/concept/10000730'}] },
-      { group:'Live',name:'Canada',currency:'CAD',status:'Live',std:109.99,ult:139.99,stdUSD:77.21,ultUSD:98.27,stores:[{slug:'en-ca',url:'https://store.playstation.com/en-ca/concept/10000730'},{slug:'fr-ca',url:'https://store.playstation.com/fr-ca/concept/10000730'}] },
-      { group:'Live',name:'Chile',currency:'USD',status:'Live',std:79.99,ult:99.99,stdUSD:79.99,ultUSD:99.99,stores:[{slug:'es-cl',url:'https://store.playstation.com/es-cl/concept/10000730'}] },
-      { group:'Live',name:'Colombia',currency:'USD',status:'Live',std:79.99,ult:99.99,stdUSD:79.99,ultUSD:99.99,stores:[{slug:'es-co',url:'https://store.playstation.com/es-co/concept/10000730'}] },
-      { group:'Live',name:'Costa Rica',currency:'USD',status:'Live',std:79.99,ult:99.99,stdUSD:79.99,ultUSD:99.99,stores:[{slug:'es-cr',url:'https://store.playstation.com/es-cr/concept/10000730'}] },
-      { group:'Live',name:'Croatia',currency:'EUR',status:'Live',std:79.99,ult:99.99,stdUSD:90.72,ultUSD:113.40,stores:[{slug:'en-hr',url:'https://store.playstation.com/en-hr/concept/10000730'},{slug:'hr-hr',url:'https://store.playstation.com/hr-hr/concept/10000730'}] },
-      { group:'Live',name:'Cyprus',currency:'EUR',status:'Live',std:79.99,ult:99.99,stdUSD:90.72,ultUSD:113.40,stores:[{slug:'en-cy',url:'https://store.playstation.com/en-cy/concept/10000730'}] },
-      { group:'Live',name:'Czech Republic',currency:'CZK',status:'Live',std:2009,ult:2499,stdUSD:93.82,ultUSD:116.70,stores:[{slug:'en-cz',url:'https://store.playstation.com/en-cz/concept/10000730'},{slug:'cs-cz',url:'https://store.playstation.com/cs-cz/concept/10000730'}] },
-      { group:'Live',name:'Denmark',currency:'DKK',status:'Live',std:599,ult:749,stdUSD:90.87,ultUSD:113.62,stores:[{slug:'en-dk',url:'https://store.playstation.com/en-dk/concept/10000730'},{slug:'da-dk',url:'https://store.playstation.com/da-dk/concept/10000730'}] },
-      { group:'Live',name:'Ecuador',currency:'USD',status:'Live',std:79.99,ult:99.99,stdUSD:79.99,ultUSD:99.99,stores:[{slug:'es-ec',url:'https://store.playstation.com/es-ec/concept/10000730'}] },
-      { group:'Live',name:'El Salvador',currency:'USD',status:'Live',std:79.99,ult:99.99,stdUSD:79.99,ultUSD:99.99,stores:[{slug:'es-sv',url:'https://store.playstation.com/es-sv/concept/10000730'}] },
-      { group:'Live',name:'Finland',currency:'EUR',status:'Live',std:79.99,ult:99.99,stdUSD:90.72,ultUSD:113.40,stores:[{slug:'en-fi',url:'https://store.playstation.com/en-fi/concept/10000730'},{slug:'fi-fi',url:'https://store.playstation.com/fi-fi/concept/10000730'}] },
-      { group:'Live',name:'France',currency:'EUR',status:'Live',std:79.99,ult:99.99,stdUSD:90.72,ultUSD:113.40,stores:[{slug:'fr-fr',url:'https://store.playstation.com/fr-fr/concept/10000730'}] },
-      { group:'Live',name:'Germany',currency:'EUR',status:'Live',std:79.99,ult:99.99,stdUSD:90.72,ultUSD:113.40,stores:[{slug:'de-de',url:'https://store.playstation.com/de-de/concept/10000730'}] },
-      { group:'Live',name:'Greece',currency:'EUR',status:'Live',std:79.99,ult:99.99,stdUSD:90.72,ultUSD:113.40,stores:[{slug:'en-gr',url:'https://store.playstation.com/en-gr/concept/10000730'},{slug:'el-gr',url:'https://store.playstation.com/el-gr/concept/10000730'}] },
-      { group:'Live',name:'Guatemala',currency:'USD',status:'Live',std:79.99,ult:99.99,stdUSD:79.99,ultUSD:99.99,stores:[{slug:'es-gt',url:'https://store.playstation.com/es-gt/concept/10000730'}] },
-      { group:'Live',name:'Honduras',currency:'USD',status:'Live',std:79.99,ult:99.99,stdUSD:79.99,ultUSD:99.99,stores:[{slug:'es-hn',url:'https://store.playstation.com/es-hn/concept/10000730'}] },
-      { group:'Live',name:'Hong Kong',currency:'HKD',status:'Live',std:568,ult:708,stdUSD:72.42,ultUSD:90.27,stores:[{slug:'en-hk',url:'https://store.playstation.com/en-hk/concept/10000730'},{slug:'zh-hans-hk',url:'https://store.playstation.com/zh-hans-hk/concept/10000730'},{slug:'zh-hant-hk',url:'https://store.playstation.com/zh-hant-hk/concept/10000730'}] },
-      { group:'Live',name:'Hungary',currency:'HUF',status:'Live',std:31990,ult:39990,stdUSD:102.37,ultUSD:127.97,stores:[{slug:'en-hu',url:'https://store.playstation.com/en-hu/concept/10000730'},{slug:'hu-hu',url:'https://store.playstation.com/hu-hu/concept/10000730'}] },
-      { group:'Live',name:'Iceland',currency:'EUR',status:'Live',std:79.99,ult:99.99,stdUSD:90.72,ultUSD:113.40,stores:[{slug:'en-is',url:'https://store.playstation.com/en-is/concept/10000730'}] },
-      { group:'Live',name:'India',currency:'INR',status:'Live',std:5999,ult:7499,stdUSD:63.59,ultUSD:79.49,stores:[{slug:'en-in',url:'https://store.playstation.com/en-in/concept/10000730'}] },
-      { group:'Live',name:'Indonesia',currency:'IDR',status:'Live',std:1190000,ult:1490000,stdUSD:66.64,ultUSD:83.44,stores:[{slug:'en-id',url:'https://store.playstation.com/en-id/concept/10000730'}] },
-      { group:'Live',name:'Ireland',currency:'EUR',status:'Live',std:79.99,ult:99.99,stdUSD:90.72,ultUSD:113.40,stores:[{slug:'en-ie',url:'https://store.playstation.com/en-ie/concept/10000730'}] },
-      { group:'Live',name:'Israel',currency:'ILS',status:'Live',std:319,ult:399,stdUSD:107.09,ultUSD:133.94,stores:[{slug:'en-il',url:'https://store.playstation.com/en-il/concept/10000730'},{slug:'he-il',url:'https://store.playstation.com/he-il/concept/10000730'}] },
-      { group:'Live',name:'Italy',currency:'EUR',status:'Live',std:79.99,ult:99.99,stdUSD:90.72,ultUSD:113.40,stores:[{slug:'it-it',url:'https://store.playstation.com/it-it/concept/10000730'}] },
-      { group:'Live',name:'Japan',currency:'JPY',status:'Live',std:9800,ult:12280,stdUSD:60.76,ultUSD:76.14,stores:[{slug:'ja-jp',url:'https://store.playstation.com/ja-jp/product/JP0230-PPSA29660_00-GTAVISTANDARD001'}] },
-      { group:'Live',name:'Luxembourg',currency:'EUR',status:'Live',std:79.99,ult:99.99,stdUSD:90.72,ultUSD:113.40,stores:[{slug:'de-lu',url:'https://store.playstation.com/de-lu/concept/10000730'},{slug:'fr-lu',url:'https://store.playstation.com/fr-lu/concept/10000730'}] },
-      { group:'Live',name:'Malaysia',currency:'MYR',status:'Live',std:339,ult:419,stdUSD:82.34,ultUSD:101.78,stores:[{slug:'en-my',url:'https://store.playstation.com/en-my/concept/10000730'}] },
-      { group:'Live',name:'Malta',currency:'EUR',status:'Live',std:79.99,ult:99.99,stdUSD:90.72,ultUSD:113.40,stores:[{slug:'en-mt',url:'https://store.playstation.com/en-mt/concept/10000730'}] },
-      { group:'Live',name:'Mexico',currency:'USD',status:'Live',std:79.99,ult:99.99,stdUSD:79.99,ultUSD:99.99,stores:[{slug:'es-mx',url:'https://store.playstation.com/es-mx/concept/10000730'}] },
-      { group:'Live',name:'Netherlands',currency:'EUR',status:'Live',std:79.99,ult:99.99,stdUSD:90.72,ultUSD:113.40,stores:[{slug:'nl-nl',url:'https://store.playstation.com/nl-nl/concept/10000730'}] },
-      { group:'Live',name:'New Zealand',currency:'NZD',status:'Live',std:139.95,ult:174.95,stdUSD:78.86,ultUSD:98.58,stores:[{slug:'en-nz',url:'https://store.playstation.com/en-nz/concept/10000730'}] },
-      { group:'Live',name:'Nicaragua',currency:'USD',status:'Live',std:79.99,ult:99.99,stdUSD:79.99,ultUSD:99.99,stores:[{slug:'es-ni',url:'https://store.playstation.com/es-ni/concept/10000730'}] },
-      { group:'Live',name:'Norway',currency:'NOK',status:'Live',std:949,ult:1189,stdUSD:95.94,ultUSD:120.21,stores:[{slug:'en-no',url:'https://store.playstation.com/en-no/concept/10000730'},{slug:'no-no',url:'https://store.playstation.com/no-no/concept/10000730'}] },
-      { group:'Live',name:'Panama',currency:'USD',status:'Live',std:79.99,ult:99.99,stdUSD:79.99,ultUSD:99.99,stores:[{slug:'es-pa',url:'https://store.playstation.com/es-pa/concept/10000730'}] },
-      { group:'Live',name:'Paraguay',currency:'USD',status:'Live',std:79.99,ult:99.99,stdUSD:79.99,ultUSD:99.99,stores:[{slug:'es-py',url:'https://store.playstation.com/es-py/concept/10000730'}] },
-      { group:'Live',name:'Peru',currency:'USD',status:'Live',std:79.99,ult:99.99,stdUSD:79.99,ultUSD:99.99,stores:[{slug:'es-pe',url:'https://store.playstation.com/es-pe/concept/10000730'}] },
-      { group:'Live',name:'Poland',currency:'PLN',status:'Live',std:349,ult:429,stdUSD:92.31,ultUSD:113.47,stores:[{slug:'en-pl',url:'https://store.playstation.com/en-pl/concept/10000730'},{slug:'pl-pl',url:'https://store.playstation.com/pl-pl/concept/10000730'}] },
-      { group:'Live',name:'Portugal',currency:'EUR',status:'Live',std:79.99,ult:99.99,stdUSD:90.72,ultUSD:113.40,stores:[{slug:'pt-pt',url:'https://store.playstation.com/pt-pt/concept/10000730'}] },
-      { group:'Live',name:'Romania',currency:'RON',status:'Live',std:399.90,ult:499.90,stdUSD:86.70,ultUSD:108.38,stores:[{slug:'en-ro',url:'https://store.playstation.com/en-ro/concept/10000730'},{slug:'ro-ro',url:'https://store.playstation.com/ro-ro/concept/10000730'}] },
-      { group:'Live',name:'Saudi Arabia',currency:'USD',status:'Live',std:79.99,ult:99.99,stdUSD:79.99,ultUSD:99.99,stores:[{slug:'ar-sa',url:'https://store.playstation.com/ar-sa/concept/10000730'},{slug:'en-sa',url:'https://store.playstation.com/en-sa/concept/10000730'}] },
-      { group:'Live',name:'Singapore',currency:'SGD',status:'Live',std:109,ult:136,stdUSD:83.98,ultUSD:104.79,stores:[{slug:'en-sg',url:'https://store.playstation.com/en-sg/concept/10000730'}] },
-      { group:'Live',name:'Slovakia',currency:'EUR',status:'Live',std:79.99,ult:99.99,stdUSD:90.72,ultUSD:113.40,stores:[{slug:'en-sk',url:'https://store.playstation.com/en-sk/concept/10000730'},{slug:'sk-sk',url:'https://store.playstation.com/sk-sk/concept/10000730'}] },
-      { group:'Live',name:'Slovenia',currency:'EUR',status:'Live',std:79.99,ult:99.99,stdUSD:90.72,ultUSD:113.40,stores:[{slug:'en-si',url:'https://store.playstation.com/en-si/concept/10000730'},{slug:'sl-si',url:'https://store.playstation.com/sl-si/concept/10000730'}] },
-      { group:'Live',name:'South Africa',currency:'ZAR',status:'Live',std:1499,ult:1899,stdUSD:90.39,ultUSD:114.51,stores:[{slug:'en-za',url:'https://www.playstation.com/en-za/games/grand-theft-auto-vi/'}] },
-      { group:'Live',name:'South Korea',currency:'KRW',status:'Live',std:89800,ult:112800,stdUSD:58.19,ultUSD:73.09,stores:[{slug:'ko-kr',url:'https://store.playstation.com/ko-kr/concept/10000730'}] },
-      { group:'Live',name:'Spain',currency:'EUR',status:'Live',std:79.99,ult:99.99,stdUSD:90.72,ultUSD:113.40,stores:[{slug:'es-es',url:'https://store.playstation.com/es-es/concept/10000730'}] },
-      { group:'Live',name:'Sweden',currency:'SEK',status:'Live',std:899,ult:1149,stdUSD:92.06,ultUSD:117.66,stores:[{slug:'en-se',url:'https://store.playstation.com/en-se/concept/10000730'},{slug:'sv-se',url:'https://store.playstation.com/sv-se/concept/10000730'}] },
-      { group:'Live',name:'Switzerland',currency:'CHF',status:'Live',std:79.90,ult:99.90,stdUSD:98.25,ultUSD:122.85,stores:[{slug:'de-ch',url:'https://store.playstation.com/de-ch/concept/10000730'},{slug:'fr-ch',url:'https://store.playstation.com/fr-ch/concept/10000730'},{slug:'it-ch',url:'https://store.playstation.com/it-ch/concept/10000730'}] },
-      { group:'Live',name:'Thailand',currency:'THB',status:'Live',std:2690,ult:3390,stdUSD:80.43,ultUSD:101.36,stores:[{slug:'en-th',url:'https://store.playstation.com/en-th/concept/10000730'},{slug:'th-th',url:'https://store.playstation.com/th-th/concept/10000730'}] },
-      { group:'Live',name:'Turkey',currency:'TRY',status:'Live',std:3999,ult:4999,stdUSD:85.98,ultUSD:107.48,stores:[{slug:'en-tr',url:'https://store.playstation.com/en-tr/concept/10000730'},{slug:'tr-tr',url:'https://store.playstation.com/tr-tr/concept/10000730'}] },
-      { group:'Live',name:'UAE',currency:'USD',status:'Live',std:79.99,ult:99.99,stdUSD:79.99,ultUSD:99.99,stores:[{slug:'ar-ae',url:'https://store.playstation.com/ar-ae/concept/10000730'},{slug:'en-ae',url:'https://store.playstation.com/en-ae/concept/10000730'}] },
-      { group:'Live',name:'Ukraine',currency:'UAH',status:'Live',std:3499,ult:4299,stdUSD:77.68,ultUSD:95.44,stores:[{slug:'ru-ua',url:'https://store.playstation.com/ru-ua/concept/10000730'},{slug:'uk-ua',url:'https://store.playstation.com/uk-ua/concept/10000730'}] },
-      { group:'Live',name:'United Kingdom',currency:'GBP',status:'Live',std:69.99,ult:89.99,stdUSD:92.07,ultUSD:118.38,stores:[{slug:'en-gb',url:'https://store.playstation.com/en-gb/concept/10000730'}] },
-      { group:'Live',name:'United States',currency:'USD',status:'Live',std:79.99,ult:99.99,stdUSD:79.99,ultUSD:99.99,stores:[{slug:'en-us',url:'https://store.playstation.com/en-us/concept/10000730'}] },
-      { group:'Live',name:'Uruguay',currency:'USD',status:'Live',std:79.99,ult:99.99,stdUSD:79.99,ultUSD:99.99,stores:[{slug:'es-uy',url:'https://store.playstation.com/es-uy/concept/10000730'}] },
-
-      { group:'Unavailable',name:'Bahrain',currency:'BHD',status:'Unavailable',std:null,ult:null,stdUSD:null,ultUSD:null,stores:[{slug:'en-bh',url:'https://store.playstation.com/en-bh/concept/10000730'},{slug:'ar-bh',url:'https://store.playstation.com/ar-bh/concept/10000730'}] },
-      { group:'Unavailable',name:'China',currency:'CNY',status:'Unavailable',std:null,ult:null,stdUSD:null,ultUSD:null,stores:[{slug:'zh-hans-cn',url:'https://store.playstation.com/zh-hans-cn/concept/10000730'}] },
-      { group:'Unavailable',name:'Kuwait',currency:'KWD',status:'Unavailable',std:null,ult:null,stdUSD:null,ultUSD:null,stores:[{slug:'ar-kw',url:'https://store.playstation.com/ar-kw/concept/10000730'},{slug:'en-kw',url:'https://store.playstation.com/en-kw/concept/10000730'}] },
-      { group:'Unavailable',name:'Lebanon',currency:'LBP',status:'Unavailable',std:null,ult:null,stdUSD:null,ultUSD:null,stores:[{slug:'ar-lb',url:'https://store.playstation.com/ar-lb/concept/10000730'},{slug:'en-lb',url:'https://store.playstation.com/en-lb/concept/10000730'}] },
-      { group:'Unavailable',name:'Oman',currency:'OMR',status:'Unavailable',std:null,ult:null,stdUSD:null,ultUSD:null,stores:[{slug:'ar-om',url:'https://store.playstation.com/ar-om/concept/10000730'},{slug:'en-om',url:'https://store.playstation.com/en-om/concept/10000730'}] },
-      { group:'Unavailable',name:'Philippines',currency:'PHP',status:'Unavailable',std:null,ult:null,stdUSD:null,ultUSD:null,stores:[{slug:'en-ph',url:'https://store.playstation.com/en-ph/concept/10000730'}] },
-      { group:'Unavailable',name:'Qatar',currency:'QAR',status:'Unavailable',std:null,ult:null,stdUSD:null,ultUSD:null,stores:[{slug:'ar-qa',url:'https://store.playstation.com/ar-qa/concept/10000730'},{slug:'en-qa',url:'https://store.playstation.com/en-qa/concept/10000730'}] },
-      { group:'Unavailable',name:'Russia',currency:'RUB',status:'Unavailable',std:null,ult:null,stdUSD:null,ultUSD:null,stores:[{slug:'ru-ru',url:'https://store.playstation.com/ru-ru/concept/10000730'}] },
-      { group:'Unavailable',name:'Serbia',currency:'RSD',status:'Unavailable',std:null,ult:null,stdUSD:null,ultUSD:null,stores:[{slug:'sr-rs',url:'https://store.playstation.com/sr-rs/concept/10000730'}] },
-      { group:'Unavailable',name:'Taiwan',currency:'TWD',status:'Unavailable',std:null,ult:null,stdUSD:null,ultUSD:null,stores:[{slug:'en-tw',url:'https://store.playstation.com/en-tw/concept/10000730'},{slug:'zh-hant-tw',url:'https://store.playstation.com/zh-hant-tw/concept/10000730'}] },
-      { group:'Unavailable',name:'Vietnam',currency:'VND',status:'Unavailable',std:null,ult:null,stdUSD:null,ultUSD:null,stores:[{slug:'en-vn',url:'https://store.playstation.com/en-vn/concept/10000730'}] },
-    ];
-
-    const GROUP_ORDER = { Live:0, Pending:1, Unavailable:2 };
-    REGIONS.sort((a,b) => { const g=GROUP_ORDER[a.group]-GROUP_ORDER[b.group]; return g!==0 ? g : a.name.localeCompare(b.name); });
-
-    // ═══════════════════════════════════════════════════════════════
-    //  TABLE
-    // ═══════════════════════════════════════════════════════════════
-
-    let sortField = 'stdUSD', sortDir = 'desc', searchQuery = '', statusFilterVal = 'all';
-
-    function fmtLocal(v, cur) {
-      if (v===null||v===undefined) return '<span style="color:var(--muted)">\u2014</span>';
-      const m = (s) => `<span class="tabular">${s}</span>`;
-      if (cur==='EUR') return m('\u20AC'+v.toFixed(2));
-      if (cur==='JPY') return m('\u00A5'+Math.round(v).toLocaleString());
-      if (cur==='KRW') return m('\u20A9'+Math.round(v).toLocaleString());
-      if (cur==='INR') return m('\u20B9'+Math.round(v).toLocaleString());
-      return m(cur+' '+v.toLocaleString());
-    }
-
-    function renderTable() {
-      const tbody = document.getElementById('tableBody');
-      tbody.innerHTML = '';
-      let filtered = REGIONS.filter(r => {
-        if (statusFilterVal!=='all' && r.group!==statusFilterVal) return false;
-        if (searchQuery && !r.name.toLowerCase().includes(searchQuery.toLowerCase())) return false;
-        return true;
-      });
-      if (sortField) {
-        filtered.sort((a,b) => {
-          const g = (r,f) => { if(f==='name') return r.name; if(f==='currency') return r.currency; if(f==='status') return GROUP_ORDER[r.group]; if(f==='stdUSD') return r.stdUSD??-999; if(f==='ultUSD') return r.ultUSD??-999; if(f==='variance') return (r.stdUSD??79.99)-79.99; return r.name; };
-          const va=g(a,sortField), vb=g(b,sortField);
-          return typeof va==='string' ? (sortDir==='asc'?va.localeCompare(vb):vb.localeCompare(va)) : (sortDir==='asc'?va-vb:vb-va);
-        });
-      } else {
-        filtered.sort((a,b) => { const g=GROUP_ORDER[a.group]-GROUP_ORDER[b.group]; return g!==0 ? g : a.name.localeCompare(b.name); });
-      }
-      document.getElementById('tableCount').textContent = filtered.length+' entries';
-      if (filtered.length === 0) {
-        const tr = document.createElement('tr');
-        tr.innerHTML = '<td colspan="10" class="py-8 text-center text-sm" style="color:var(--muted);">No countries match your search</td>';
-        tbody.appendChild(tr);
-        return;
-      }
-      let lastGroup = null, rowNum = 0;
-      filtered.forEach((r) => {
-        if (r.group !== lastGroup) {
-          const gr = document.createElement('tr');
-          const sc = r.group==='Live'?'#4ade80':r.group==='Pending'?'#e8b84b':'#555555';
-          gr.innerHTML = '<td colspan="10" class="py-2 px-4 text-xs font-semibold uppercase tracking-wider group-header" style="color:'+sc+'">'+r.group+'</td>';
-          tbody.appendChild(gr);
-          lastGroup = r.group;
-        }
-        rowNum++;
-        const tr = document.createElement('tr');
-        tr.style.cssText = 'border-bottom:1px solid var(--border);transition:background 0.15s;';
-        tr.onmouseenter = function(){ this.style.background = 'rgba(22,22,42,0.5)'; };
-        tr.onmouseleave = function(){ this.style.background = 'transparent'; };
-        const sd = r.status==='Live'?'<span style="color:#4ade80">Live</span>': r.status==='Pending'?'<span style="color:#e8b84b">Pending</span>':'<span style="color:#555555">N/A</span>';
-        const stdD = fmtLocal(r.std,r.currency), ultD = fmtLocal(r.ult,r.currency);
-        const sUSD = r.stdUSD!==null?'<span class="tabular">US$'+r.stdUSD.toFixed(2)+'</span>':'<span style="color:var(--muted)">\u2014</span>';
-        const uUSD = r.ultUSD!==null?'<span class="tabular">US$'+r.ultUSD.toFixed(2)+'</span>':'<span style="color:var(--muted)">\u2014</span>';
-        const var_ = r.stdUSD!==null ? r.stdUSD-79.99 : null;
-        const vD = var_!==null ? '<span class="tabular" style="color:'+(var_<0?'#4ade80':var_>0?'#e8b84b':'var(--muted)')+'">'+(var_>=0?'+':'')+'US$'+var_.toFixed(2)+'</span>' : '<span style="color:var(--muted)">\u2014</span>';
-        const links = r.stores.map(s => '<a href="'+s.url+'" target="_blank" rel="noopener" class="text-xs" style="color:var(--muted)">'+s.slug+'</a>').join(' <span style="color:var(--border)">\u00B7</span> ');
-        tr.innerHTML = '<td class="py-2 px-4 text-xs" style="color:var(--muted)">'+rowNum+'</td><td class="py-2 px-4 font-medium" style="color:var(--text)">'+r.name+'</td><td class="py-2 px-4 text-xs tabular" style="color:var(--muted)">'+r.currency+'</td><td class="py-2 px-4">'+sd+'</td><td class="py-2 px-4 tabular text-right">'+sUSD+'</td><td class="py-2 px-4 tabular text-right">'+uUSD+'</td><td class="py-2 px-4 tabular text-right">'+stdD+'</td><td class="py-2 px-4 tabular text-right">'+ultD+'</td><td class="py-2 px-4 tabular text-right">'+vD+'</td><td class="py-2 px-4 text-right text-xs">'+links+'</td>';
-        tbody.appendChild(tr);
-      });
-    }
-
-    document.getElementById('tableSearch').addEventListener('input', e => { searchQuery=e.target.value; renderTable(); });
-    document.getElementById('statusFilter').addEventListener('change', e => { statusFilterVal=e.target.value; renderTable(); });
-    function updateSortUI() {
-      document.querySelectorAll('#regionTable th[data-sort]').forEach(el => {
-        el.setAttribute('aria-sort', 'none');
-        const ic = el.querySelector('.sort-icon');
-        if (ic) ic.textContent = '';
-      });
-      if (sortField) {
-        const active = document.querySelector('#regionTable th[data-sort="'+sortField+'"]');
-        if (active) {
-          active.setAttribute('aria-sort', sortDir==='asc' ? 'ascending' : 'descending');
-          const ic = active.querySelector('.sort-icon');
-          if (ic) ic.textContent = sortDir==='asc' ? ' \u25B2' : ' \u25BC';
-        }
-      }
-    }
-    function handleSort(th) {
-      const f = th.dataset.sort;
-      if (sortField===f) sortDir=sortDir==='asc'?'desc':'asc'; else { sortField=f; sortDir='asc'; }
-      updateSortUI();
-      renderTable();
-    }
-    document.querySelectorAll('#regionTable th[data-sort]').forEach(th => {
-      th.addEventListener('click', () => handleSort(th));
-      th.addEventListener('keydown', e => { if (e.key==='Enter'||e.key===' ') { e.preventDefault(); handleSort(th); } });
-    });
-    document.getElementById('resetSort').addEventListener('click', () => { sortField=null; sortDir='asc'; updateSortUI(); renderTable(); });
-    updateSortUI();
-    renderTable();
-
-    // ═══════════════════════════════════════════════════════════════
-    //  CHART
-    // ═══════════════════════════════════════════════════════════════
-
-    const live = REGIONS.filter(r => r.group==='Live').sort((a,b) => a.stdUSD-b.stdUSD);
-
-    const presetDefs = {
-      all: live.map(r=>r.name),
-      default: live.filter(r => ['Australia','Austria','Belgium','Brazil','Canada','Denmark','France','Germany','Hong Kong','India','Ireland','Italy','Japan','Netherlands','New Zealand','Norway','Poland','Portugal','Romania','Singapore','South Korea','Spain','Sweden','Switzerland','Turkey','UAE','United Kingdom','United States'].includes(r.name)).map(r=>r.name),
-      g7: live.filter(r => ['Canada','France','Germany','Italy','Japan','United Kingdom','United States'].includes(r.name)).map(r=>r.name),
-      europe: live.filter(r => ['Austria','Belgium','Bulgaria','Croatia','Cyprus','Czech Republic','Denmark','Finland','France','Germany','Greece','Hungary','Ireland','Italy','Luxembourg','Malta','Netherlands','Norway','Poland','Portugal','Romania','Spain','Sweden','Switzerland','Turkey','Ukraine','United Kingdom'].includes(r.name)).map(r=>r.name),
-      apac: live.filter(r => ['Australia','Hong Kong','India','Indonesia','Japan','Malaysia','New Zealand','Singapore','South Korea','Thailand'].includes(r.name)).map(r=>r.name),
-      americas: live.filter(r => ['Argentina','Bolivia','Brazil','Canada','Chile','Colombia','Costa Rica','Ecuador','El Salvador','Guatemala','Honduras','Mexico','Nicaragua','Panama','Paraguay','Peru','United States','Uruguay'].includes(r.name)).map(r=>r.name),
-    };
-
-    let selected = new Set(presetDefs.default);
-
-    const cc = document.getElementById('checkboxContainer');
-    live.forEach(r => {
-      const label = document.createElement('label');
-      label.className = 'checkbox-label inline-flex items-center gap-1.5 text-xs';
-      label.style.cssText = 'display:inline-flex;align-items:center;gap:6px;color:#999999;padding:2px 8px 2px 4px;border-radius:6px;border:1px solid var(--border);background:var(--surface-2);transition:all 0.15s;cursor:pointer;';
-      label.innerHTML = '<input type="checkbox" '+(selected.has(r.name)?'checked':'')+' style="accent-color:#e8b84b;border-radius:3px;width:13px;height:13px" data-name="'+r.name+'"> <span>'+r.name+'</span>';
-      const cb = label.querySelector('input');
-      cb.addEventListener('change', () => {
-        if (cb.checked) selected.add(r.name); else selected.delete(r.name);
-        updateChart(); updatePresetButtons();
-      });
-      cc.appendChild(label);
-    });
-
-    function updatePresetButtons() {
-      document.querySelectorAll('[data-preset]').forEach(btn => {
-        const set = new Set(presetDefs[btn.dataset.preset]||[]);
-        const match = set.size===selected.size && [...set].every(n=>selected.has(n));
-        btn.setAttribute('aria-pressed', match ? 'true' : 'false');
-        if (match) { btn.style.background='rgba(232,184,75,0.12)'; btn.style.color='#e8b84b'; btn.style.borderColor='rgba(232,184,75,0.3)'; }
-        else { btn.style.background='var(--surface-2)'; btn.style.color='var(--muted)'; btn.style.borderColor='var(--border)'; }
-      });
-    }
-
-    document.querySelectorAll('[data-preset]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const names = presetDefs[btn.dataset.preset]||[];
-        selected = new Set(names);
-        cc.querySelectorAll('input[type=checkbox]').forEach(cb => cb.checked=selected.has(cb.dataset.name));
-        updateChart(); updatePresetButtons();
-      });
-    });
-
-    function fmtLocalShort(r, mode) {
-      const v = mode==='ult' ? r.ult : r.std;
-      if (r.currency==='EUR') return '\u20AC'+v.toFixed(2);
-      if (r.currency==='JPY') return '\u00A5'+Math.round(v).toLocaleString();
-      if (r.currency==='KRW') return '\u20A9'+Math.round(v).toLocaleString();
-      if (r.currency==='INR') return '\u20B9'+Math.round(v).toLocaleString();
-      return r.currency+' '+v.toLocaleString();
-    }
-
-    let mainChart = null, varChart = null, varMode = 'std';
-
-    const baselinePlugin = {
-      id: 'baselineLine',
-      beforeDraw(chart) {
-        const bl = chart.options.plugins.baselineLine;
-        if (!bl || bl.value == null) return;
-        const yScale = chart.scales.y;
-        const y = yScale.getPixelForValue(bl.value);
-        if (y < yScale.top || y > yScale.bottom) return;
-        const ctx = chart.ctx;
-        ctx.save();
-        ctx.beginPath();
-        ctx.setLineDash([6, 4]);
-        ctx.strokeStyle = bl.color || 'rgba(255,255,255,0.2)';
-        ctx.lineWidth = 1;
-        ctx.moveTo(chart.chartArea.left, y);
-        ctx.lineTo(chart.chartArea.right, y);
-        ctx.stroke();
-        ctx.restore();
-        if (bl.label) {
-          ctx.save();
-          ctx.font = '10px DM Mono, monospace';
-          ctx.fillStyle = bl.labelColor || 'rgba(255,255,255,0.35)';
-          ctx.textAlign = 'right';
-          ctx.fillText(bl.label, chart.chartArea.right - 4, y - 5);
-          ctx.restore();
-        }
-      }
-    };
-    Chart.register(baselinePlugin);
-
-    function makeChart(canvasId, type, labels, datasets, opts) {
-      const ctx = document.getElementById(canvasId).getContext('2d');
-      return new Chart(ctx, {
-        type,
-        data: { labels, datasets },
-        options: {
-          responsive: true, maintainAspectRatio: false,
-          plugins: {
-            legend: opts.hideLegend ? { display:false } : { labels: { color:'#999999', font:{family:'DM Sans',size:11}, usePointStyle:true, padding:16 } },
-            tooltip: {
-              backgroundColor:'#0a0a0a', titleColor:'#ffffff', bodyColor:'#999999',
-              borderColor:'#1a1a1a', borderWidth:1, padding:12, cornerRadius:6,
-              callbacks: opts.tooltipCallbacks || {}
-            },
-            baselineLine: opts.baseline || {}
-          },
-          scales: {
-            x: { ticks: { color:'#707070', font:{family:'DM Sans',size:10}, maxRotation: 45, minRotation: 0 }, grid: { display:false } },
-            y: { ticks: { color:'#707070', font:{family:'DM Sans',size:10}, callback: v=>'US$'+v }, grid: { color:'rgba(255,255,255,0.06)' } }
-          }
-        }
-      });
-    }
-
-    function updateChart() {
-      const filtered = live.filter(r=>selected.has(r.name)).sort((a,b)=>a.stdUSD-b.stdUSD);
-      document.getElementById('chartCount').textContent = filtered.length+' countries selected';
-      const empty = document.getElementById('mainChartEmpty');
-      if (filtered.length === 0) {
-        empty.style.display = 'flex';
-        if (mainChart) { mainChart.destroy(); mainChart = null; }
-        if (varChart) { varChart.destroy(); varChart = null; }
-        return;
-      }
-      empty.style.display = 'none';
-      if (mainChart) mainChart.destroy();
-      mainChart = makeChart('mainChart', 'bar', filtered.map(r=>r.name), [
-        { label:'Standard Edition', data:filtered.map(r=>r.stdUSD), backgroundColor:'rgba(232,184,75,0.85)', borderRadius:4, borderSkipped:false },
-        { label:'Ultimate Edition', data:filtered.map(r=>r.ultUSD), backgroundColor:'rgba(192,57,43,0.85)', borderRadius:4, borderSkipped:false }
-      ], {
-        baseline: { value: 79.99, label: 'US baseline $79.99', color: 'rgba(255,255,255,0.25)', labelColor: 'rgba(255,255,255,0.4)' },
-        tooltipCallbacks: {
-          afterBody: ctx => { const r=filtered[ctx[0].dataIndex]; const mode=ctx[0].datasetIndex===1?'ult':'std'; return 'Local: '+fmtLocalShort(r, mode); }
-        }
-      });
-      updateVarianceChart();
-    }
-
-    function updateVarianceChart() {
-      const filtered = live.filter(r=>selected.has(r.name)).sort((a,b)=>a.stdUSD-b.stdUSD);
-      const varEmpty = document.getElementById('varChartEmpty');
-      if (filtered.length === 0) {
-        varEmpty.style.display = 'flex';
-        if (varChart) { varChart.destroy(); varChart = null; }
-        return;
-      }
-      varEmpty.style.display = 'none';
-      const baseline = varMode === 'std' ? 79.99 : 99.99;
-      const label = varMode === 'std' ? 'vs Standard (US$79.99)' : 'vs Ultimate (US$99.99)';
-      if (varChart) varChart.destroy();
-      varChart = makeChart('varianceChart', 'bar', filtered.map(r=>r.name), [{
-        label,
-        data: filtered.map(r=>+( (varMode==='std'?r.stdUSD:r.ultUSD) - baseline).toFixed(2)),
-        backgroundColor: filtered.map(r=>{const v=(varMode==='std'?r.stdUSD:r.ultUSD)-baseline; return v>0?'rgba(192,57,43,0.8)':v<0?'rgba(232,184,75,0.8)':'rgba(85,85,85,0.5)';}),
-        borderRadius: 4, borderSkipped: false
-      }], {
-        hideLegend: true,
-        baseline: { value: 0, color: 'rgba(255,255,255,0.15)' },
-        tooltipCallbacks: {
-          afterBody: ctx => { const r=filtered[ctx[0].dataIndex]; return 'Local: '+fmtLocalShort(r, varMode); }
-        }
-      });
-    }
-
-    function updateVarButtons() {
-      const stdBtn = document.getElementById('varStdBtn');
-      const ultBtn = document.getElementById('varUltBtn');
-      const active = 'rgba(232,184,75,0.12)', inactive = 'var(--surface-2)';
-      stdBtn.style.background = varMode==='std' ? active : inactive;
-      stdBtn.style.color = varMode==='std' ? '#e8b84b' : 'var(--muted)';
-      stdBtn.style.borderColor = varMode==='std' ? 'rgba(232,184,75,0.3)' : 'var(--border)';
-      ultBtn.style.background = varMode==='ult' ? active : inactive;
-      ultBtn.style.color = varMode==='ult' ? '#e8b84b' : 'var(--muted)';
-      ultBtn.style.borderColor = varMode==='ult' ? 'rgba(232,184,75,0.3)' : 'var(--border)';
-    }
-
-    document.getElementById('varStdBtn').addEventListener('click', () => { varMode='std'; updateVarButtons(); updateVarianceChart(); });
-    document.getElementById('varUltBtn').addEventListener('click', () => { varMode='ult'; updateVarButtons(); updateVarianceChart(); });
-
-    updateChart(); updatePresetButtons(); updateVarButtons();
-
-    const bgEl = document.querySelector('.bg-parallax');
-    if (bgEl && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      let ticking = false;
-      window.addEventListener('scroll', () => {
-        if (!ticking) {
-          requestAnimationFrame(() => {
-            const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-            const progress = Math.min(window.scrollY / Math.max(maxScroll, 1), 1);
-            bgEl.style.transform = 'translate3d(0,' + (-progress * window.innerHeight * 0.2) + 'px,0)';
-            ticking = false;
-          });
-          ticking = true;
-        }
-      }, { passive: true });
-    }
-  </script>
+  <script src="app.js"></script>
 </body>
 </html>

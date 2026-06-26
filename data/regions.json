@@ -1,0 +1,1256 @@
+{
+  "snapshot_date": "2026-06-25",
+  "exchange_rates": {
+    "AUD": 0.689,
+    "BRL": 0.1918,
+    "CAD": 0.702,
+    "CHF": 1.2297,
+    "CZK": 0.0467,
+    "DKK": 0.1517,
+    "EUR": 1.1341,
+    "GBP": 1.3155,
+    "HKD": 0.1275,
+    "HUF": 0.0032,
+    "IDR": 5.6e-05,
+    "ILS": 0.3357,
+    "INR": 0.0106,
+    "JPY": 0.0062,
+    "KRW": 0.000648,
+    "MYR": 0.2429,
+    "NOK": 0.1011,
+    "NZD": 0.5635,
+    "PLN": 0.2645,
+    "RON": 0.2168,
+    "SEK": 0.1024,
+    "SGD": 0.7705,
+    "THB": 0.0299,
+    "TRY": 0.0215,
+    "UAH": 0.0222,
+    "ZAR": 0.0603
+  },
+  "regions": [
+    {
+      "name": "Argentina",
+      "currency": "USD",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 79.99,
+      "ultimate_usd": 99.99,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "es-ar",
+          "url": "https://store.playstation.com/es-ar/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Australia",
+      "currency": "AUD",
+      "standard_local": 129.95,
+      "ultimate_local": 159.95,
+      "standard_usd": 89.54,
+      "ultimate_usd": 110.21,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "en-au",
+          "url": "https://store.playstation.com/en-au/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Austria",
+      "currency": "EUR",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 90.72,
+      "ultimate_usd": 113.4,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "de-at",
+          "url": "https://store.playstation.com/de-at/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Belgium",
+      "currency": "EUR",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 90.72,
+      "ultimate_usd": 113.4,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "fr-be",
+          "url": "https://store.playstation.com/fr-be/concept/10000730"
+        },
+        {
+          "slug": "nl-be",
+          "url": "https://store.playstation.com/nl-be/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Bolivia",
+      "currency": "USD",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 79.99,
+      "ultimate_usd": 99.99,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "es-bo",
+          "url": "https://store.playstation.com/es-bo/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Brazil",
+      "currency": "BRL",
+      "standard_local": 449.9,
+      "ultimate_local": 549.9,
+      "standard_usd": 86.29,
+      "ultimate_usd": 105.47,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "pt-br",
+          "url": "https://store.playstation.com/pt-br/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Bulgaria",
+      "currency": "EUR",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 90.72,
+      "ultimate_usd": 113.4,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "en-bg",
+          "url": "https://store.playstation.com/en-bg/concept/10000730"
+        },
+        {
+          "slug": "bg-bg",
+          "url": "https://store.playstation.com/bg-bg/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Canada",
+      "currency": "CAD",
+      "standard_local": 109.99,
+      "ultimate_local": 139.99,
+      "standard_usd": 77.21,
+      "ultimate_usd": 98.27,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "en-ca",
+          "url": "https://store.playstation.com/en-ca/concept/10000730"
+        },
+        {
+          "slug": "fr-ca",
+          "url": "https://store.playstation.com/fr-ca/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Chile",
+      "currency": "USD",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 79.99,
+      "ultimate_usd": 99.99,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "es-cl",
+          "url": "https://store.playstation.com/es-cl/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Colombia",
+      "currency": "USD",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 79.99,
+      "ultimate_usd": 99.99,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "es-co",
+          "url": "https://store.playstation.com/es-co/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Costa Rica",
+      "currency": "USD",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 79.99,
+      "ultimate_usd": 99.99,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "es-cr",
+          "url": "https://store.playstation.com/es-cr/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Croatia",
+      "currency": "EUR",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 90.72,
+      "ultimate_usd": 113.4,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "en-hr",
+          "url": "https://store.playstation.com/en-hr/concept/10000730"
+        },
+        {
+          "slug": "hr-hr",
+          "url": "https://store.playstation.com/hr-hr/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Cyprus",
+      "currency": "EUR",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 90.72,
+      "ultimate_usd": 113.4,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "en-cy",
+          "url": "https://store.playstation.com/en-cy/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Czech Republic",
+      "currency": "CZK",
+      "standard_local": 2009.0,
+      "ultimate_local": 2499.0,
+      "standard_usd": 93.82,
+      "ultimate_usd": 116.7,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "en-cz",
+          "url": "https://store.playstation.com/en-cz/concept/10000730"
+        },
+        {
+          "slug": "cs-cz",
+          "url": "https://store.playstation.com/cs-cz/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Denmark",
+      "currency": "DKK",
+      "standard_local": 599.0,
+      "ultimate_local": 749.0,
+      "standard_usd": 90.87,
+      "ultimate_usd": 113.62,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "en-dk",
+          "url": "https://store.playstation.com/en-dk/concept/10000730"
+        },
+        {
+          "slug": "da-dk",
+          "url": "https://store.playstation.com/da-dk/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Ecuador",
+      "currency": "USD",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 79.99,
+      "ultimate_usd": 99.99,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "es-ec",
+          "url": "https://store.playstation.com/es-ec/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "El Salvador",
+      "currency": "USD",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 79.99,
+      "ultimate_usd": 99.99,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "es-sv",
+          "url": "https://store.playstation.com/es-sv/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Finland",
+      "currency": "EUR",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 90.72,
+      "ultimate_usd": 113.4,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "en-fi",
+          "url": "https://store.playstation.com/en-fi/concept/10000730"
+        },
+        {
+          "slug": "fi-fi",
+          "url": "https://store.playstation.com/fi-fi/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "France",
+      "currency": "EUR",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 90.72,
+      "ultimate_usd": 113.4,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "fr-fr",
+          "url": "https://store.playstation.com/fr-fr/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Germany",
+      "currency": "EUR",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 90.72,
+      "ultimate_usd": 113.4,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "de-de",
+          "url": "https://store.playstation.com/de-de/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Greece",
+      "currency": "EUR",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 90.72,
+      "ultimate_usd": 113.4,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "en-gr",
+          "url": "https://store.playstation.com/en-gr/concept/10000730"
+        },
+        {
+          "slug": "el-gr",
+          "url": "https://store.playstation.com/el-gr/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Guatemala",
+      "currency": "USD",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 79.99,
+      "ultimate_usd": 99.99,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "es-gt",
+          "url": "https://store.playstation.com/es-gt/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Honduras",
+      "currency": "USD",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 79.99,
+      "ultimate_usd": 99.99,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "es-hn",
+          "url": "https://store.playstation.com/es-hn/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Hong Kong",
+      "currency": "HKD",
+      "standard_local": 568.0,
+      "ultimate_local": 708.0,
+      "standard_usd": 72.42,
+      "ultimate_usd": 90.27,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "en-hk",
+          "url": "https://store.playstation.com/en-hk/concept/10000730"
+        },
+        {
+          "slug": "zh-hans-hk",
+          "url": "https://store.playstation.com/zh-hans-hk/concept/10000730"
+        },
+        {
+          "slug": "zh-hant-hk",
+          "url": "https://store.playstation.com/zh-hant-hk/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Hungary",
+      "currency": "HUF",
+      "standard_local": 31990.0,
+      "ultimate_local": 39990.0,
+      "standard_usd": 102.37,
+      "ultimate_usd": 127.97,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "en-hu",
+          "url": "https://store.playstation.com/en-hu/concept/10000730"
+        },
+        {
+          "slug": "hu-hu",
+          "url": "https://store.playstation.com/hu-hu/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Iceland",
+      "currency": "EUR",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 90.72,
+      "ultimate_usd": 113.4,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "en-is",
+          "url": "https://store.playstation.com/en-is/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "India",
+      "currency": "INR",
+      "standard_local": 5999,
+      "ultimate_local": 7499,
+      "standard_usd": 63.59,
+      "ultimate_usd": 79.49,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "en-in",
+          "url": "https://store.playstation.com/en-in/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Indonesia",
+      "currency": "IDR",
+      "standard_local": 1190000,
+      "ultimate_local": 1490000,
+      "standard_usd": 66.64,
+      "ultimate_usd": 83.44,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "en-id",
+          "url": "https://store.playstation.com/en-id/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Ireland",
+      "currency": "EUR",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 90.72,
+      "ultimate_usd": 113.4,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "en-ie",
+          "url": "https://store.playstation.com/en-ie/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Israel",
+      "currency": "ILS",
+      "standard_local": 319.0,
+      "ultimate_local": 399.0,
+      "standard_usd": 107.09,
+      "ultimate_usd": 133.94,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "en-il",
+          "url": "https://store.playstation.com/en-il/concept/10000730"
+        },
+        {
+          "slug": "he-il",
+          "url": "https://store.playstation.com/he-il/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Italy",
+      "currency": "EUR",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 90.72,
+      "ultimate_usd": 113.4,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "it-it",
+          "url": "https://store.playstation.com/it-it/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Japan",
+      "currency": "JPY",
+      "standard_local": 9800,
+      "ultimate_local": 12280,
+      "standard_usd": 60.76,
+      "ultimate_usd": 76.14,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "ja-jp",
+          "url": "https://store.playstation.com/ja-jp/product/JP0230-PPSA29660_00-GTAVISTANDARD001"
+        }
+      ]
+    },
+    {
+      "name": "Luxembourg",
+      "currency": "EUR",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 90.72,
+      "ultimate_usd": 113.4,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "de-lu",
+          "url": "https://store.playstation.com/de-lu/concept/10000730"
+        },
+        {
+          "slug": "fr-lu",
+          "url": "https://store.playstation.com/fr-lu/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Malaysia",
+      "currency": "MYR",
+      "standard_local": 339.0,
+      "ultimate_local": 419.0,
+      "standard_usd": 82.34,
+      "ultimate_usd": 101.78,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "en-my",
+          "url": "https://store.playstation.com/en-my/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Malta",
+      "currency": "EUR",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 90.72,
+      "ultimate_usd": 113.4,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "en-mt",
+          "url": "https://store.playstation.com/en-mt/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Mexico",
+      "currency": "USD",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 79.99,
+      "ultimate_usd": 99.99,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "es-mx",
+          "url": "https://store.playstation.com/es-mx/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Netherlands",
+      "currency": "EUR",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 90.72,
+      "ultimate_usd": 113.4,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "nl-nl",
+          "url": "https://store.playstation.com/nl-nl/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "New Zealand",
+      "currency": "NZD",
+      "standard_local": 139.95,
+      "ultimate_local": 174.95,
+      "standard_usd": 78.86,
+      "ultimate_usd": 98.58,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "en-nz",
+          "url": "https://store.playstation.com/en-nz/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Nicaragua",
+      "currency": "USD",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 79.99,
+      "ultimate_usd": 99.99,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "es-ni",
+          "url": "https://store.playstation.com/es-ni/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Norway",
+      "currency": "NOK",
+      "standard_local": 949.0,
+      "ultimate_local": 1189.0,
+      "standard_usd": 95.94,
+      "ultimate_usd": 120.21,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "en-no",
+          "url": "https://store.playstation.com/en-no/concept/10000730"
+        },
+        {
+          "slug": "no-no",
+          "url": "https://store.playstation.com/no-no/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Panama",
+      "currency": "USD",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 79.99,
+      "ultimate_usd": 99.99,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "es-pa",
+          "url": "https://store.playstation.com/es-pa/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Paraguay",
+      "currency": "USD",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 79.99,
+      "ultimate_usd": 99.99,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "es-py",
+          "url": "https://store.playstation.com/es-py/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Peru",
+      "currency": "USD",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 79.99,
+      "ultimate_usd": 99.99,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "es-pe",
+          "url": "https://store.playstation.com/es-pe/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Poland",
+      "currency": "PLN",
+      "standard_local": 349.0,
+      "ultimate_local": 429.0,
+      "standard_usd": 92.31,
+      "ultimate_usd": 113.47,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "en-pl",
+          "url": "https://store.playstation.com/en-pl/concept/10000730"
+        },
+        {
+          "slug": "pl-pl",
+          "url": "https://store.playstation.com/pl-pl/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Portugal",
+      "currency": "EUR",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 90.72,
+      "ultimate_usd": 113.4,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "pt-pt",
+          "url": "https://store.playstation.com/pt-pt/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Romania",
+      "currency": "RON",
+      "standard_local": 399.9,
+      "ultimate_local": 499.9,
+      "standard_usd": 86.7,
+      "ultimate_usd": 108.38,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "en-ro",
+          "url": "https://store.playstation.com/en-ro/concept/10000730"
+        },
+        {
+          "slug": "ro-ro",
+          "url": "https://store.playstation.com/ro-ro/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Saudi Arabia",
+      "currency": "USD",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 79.99,
+      "ultimate_usd": 99.99,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "ar-sa",
+          "url": "https://store.playstation.com/ar-sa/concept/10000730"
+        },
+        {
+          "slug": "en-sa",
+          "url": "https://store.playstation.com/en-sa/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Singapore",
+      "currency": "SGD",
+      "standard_local": 109.0,
+      "ultimate_local": 136.0,
+      "standard_usd": 83.98,
+      "ultimate_usd": 104.79,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "en-sg",
+          "url": "https://store.playstation.com/en-sg/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Slovakia",
+      "currency": "EUR",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 90.72,
+      "ultimate_usd": 113.4,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "en-sk",
+          "url": "https://store.playstation.com/en-sk/concept/10000730"
+        },
+        {
+          "slug": "sk-sk",
+          "url": "https://store.playstation.com/sk-sk/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Slovenia",
+      "currency": "EUR",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 90.72,
+      "ultimate_usd": 113.4,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "en-si",
+          "url": "https://store.playstation.com/en-si/concept/10000730"
+        },
+        {
+          "slug": "sl-si",
+          "url": "https://store.playstation.com/sl-si/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "South Africa",
+      "currency": "ZAR",
+      "standard_local": 1499.0,
+      "ultimate_local": 1899.0,
+      "standard_usd": 90.39,
+      "ultimate_usd": 114.51,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "en-za",
+          "url": "https://www.playstation.com/en-za/games/grand-theft-auto-vi/"
+        }
+      ]
+    },
+    {
+      "name": "South Korea",
+      "currency": "KRW",
+      "standard_local": 89800,
+      "ultimate_local": 112800,
+      "standard_usd": 58.19,
+      "ultimate_usd": 73.09,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "ko-kr",
+          "url": "https://store.playstation.com/ko-kr/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Spain",
+      "currency": "EUR",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 90.72,
+      "ultimate_usd": 113.4,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "es-es",
+          "url": "https://store.playstation.com/es-es/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Sweden",
+      "currency": "SEK",
+      "standard_local": 899.0,
+      "ultimate_local": 1149.0,
+      "standard_usd": 92.06,
+      "ultimate_usd": 117.66,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "en-se",
+          "url": "https://store.playstation.com/en-se/concept/10000730"
+        },
+        {
+          "slug": "sv-se",
+          "url": "https://store.playstation.com/sv-se/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Switzerland",
+      "currency": "CHF",
+      "standard_local": 79.9,
+      "ultimate_local": 99.9,
+      "standard_usd": 98.25,
+      "ultimate_usd": 122.85,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "de-ch",
+          "url": "https://store.playstation.com/de-ch/concept/10000730"
+        },
+        {
+          "slug": "fr-ch",
+          "url": "https://store.playstation.com/fr-ch/concept/10000730"
+        },
+        {
+          "slug": "it-ch",
+          "url": "https://store.playstation.com/it-ch/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Thailand",
+      "currency": "THB",
+      "standard_local": 2690.0,
+      "ultimate_local": 3390.0,
+      "standard_usd": 80.43,
+      "ultimate_usd": 101.36,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "en-th",
+          "url": "https://store.playstation.com/en-th/concept/10000730"
+        },
+        {
+          "slug": "th-th",
+          "url": "https://store.playstation.com/th-th/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Turkey",
+      "currency": "TRY",
+      "standard_local": 3999.0,
+      "ultimate_local": 4999.0,
+      "standard_usd": 85.98,
+      "ultimate_usd": 107.48,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "en-tr",
+          "url": "https://store.playstation.com/en-tr/concept/10000730"
+        },
+        {
+          "slug": "tr-tr",
+          "url": "https://store.playstation.com/tr-tr/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "UAE",
+      "currency": "USD",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 79.99,
+      "ultimate_usd": 99.99,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "ar-ae",
+          "url": "https://store.playstation.com/ar-ae/concept/10000730"
+        },
+        {
+          "slug": "en-ae",
+          "url": "https://store.playstation.com/en-ae/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Ukraine",
+      "currency": "UAH",
+      "standard_local": 3499.0,
+      "ultimate_local": 4299.0,
+      "standard_usd": 77.68,
+      "ultimate_usd": 95.44,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "ru-ua",
+          "url": "https://store.playstation.com/ru-ua/concept/10000730"
+        },
+        {
+          "slug": "uk-ua",
+          "url": "https://store.playstation.com/uk-ua/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "United Kingdom",
+      "currency": "GBP",
+      "standard_local": 69.99,
+      "ultimate_local": 89.99,
+      "standard_usd": 92.07,
+      "ultimate_usd": 118.38,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "en-gb",
+          "url": "https://store.playstation.com/en-gb/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "United States",
+      "currency": "USD",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 79.99,
+      "ultimate_usd": 99.99,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "en-us",
+          "url": "https://store.playstation.com/en-us/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Uruguay",
+      "currency": "USD",
+      "standard_local": 79.99,
+      "ultimate_local": 99.99,
+      "standard_usd": 79.99,
+      "ultimate_usd": 99.99,
+      "status": "Live",
+      "stores": [
+        {
+          "slug": "es-uy",
+          "url": "https://store.playstation.com/es-uy/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Bahrain",
+      "currency": "BHD",
+      "standard_local": null,
+      "ultimate_local": null,
+      "standard_usd": null,
+      "ultimate_usd": null,
+      "status": "Unavailable",
+      "stores": [
+        {
+          "slug": "en-bh",
+          "url": "https://store.playstation.com/en-bh/concept/10000730"
+        },
+        {
+          "slug": "ar-bh",
+          "url": "https://store.playstation.com/ar-bh/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "China",
+      "currency": "CNY",
+      "standard_local": null,
+      "ultimate_local": null,
+      "standard_usd": null,
+      "ultimate_usd": null,
+      "status": "Unavailable",
+      "stores": [
+        {
+          "slug": "zh-hans-cn",
+          "url": "https://store.playstation.com/zh-hans-cn/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Kuwait",
+      "currency": "KWD",
+      "standard_local": null,
+      "ultimate_local": null,
+      "standard_usd": null,
+      "ultimate_usd": null,
+      "status": "Unavailable",
+      "stores": [
+        {
+          "slug": "ar-kw",
+          "url": "https://store.playstation.com/ar-kw/concept/10000730"
+        },
+        {
+          "slug": "en-kw",
+          "url": "https://store.playstation.com/en-kw/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Lebanon",
+      "currency": "LBP",
+      "standard_local": null,
+      "ultimate_local": null,
+      "standard_usd": null,
+      "ultimate_usd": null,
+      "status": "Unavailable",
+      "stores": [
+        {
+          "slug": "ar-lb",
+          "url": "https://store.playstation.com/ar-lb/concept/10000730"
+        },
+        {
+          "slug": "en-lb",
+          "url": "https://store.playstation.com/en-lb/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Oman",
+      "currency": "OMR",
+      "standard_local": null,
+      "ultimate_local": null,
+      "standard_usd": null,
+      "ultimate_usd": null,
+      "status": "Unavailable",
+      "stores": [
+        {
+          "slug": "ar-om",
+          "url": "https://store.playstation.com/ar-om/concept/10000730"
+        },
+        {
+          "slug": "en-om",
+          "url": "https://store.playstation.com/en-om/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Philippines",
+      "currency": "PHP",
+      "standard_local": null,
+      "ultimate_local": null,
+      "standard_usd": null,
+      "ultimate_usd": null,
+      "status": "Unavailable",
+      "stores": [
+        {
+          "slug": "en-ph",
+          "url": "https://store.playstation.com/en-ph/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Qatar",
+      "currency": "QAR",
+      "standard_local": null,
+      "ultimate_local": null,
+      "standard_usd": null,
+      "ultimate_usd": null,
+      "status": "Unavailable",
+      "stores": [
+        {
+          "slug": "ar-qa",
+          "url": "https://store.playstation.com/ar-qa/concept/10000730"
+        },
+        {
+          "slug": "en-qa",
+          "url": "https://store.playstation.com/en-qa/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Russia",
+      "currency": "RUB",
+      "standard_local": null,
+      "ultimate_local": null,
+      "standard_usd": null,
+      "ultimate_usd": null,
+      "status": "Unavailable",
+      "stores": [
+        {
+          "slug": "ru-ru",
+          "url": "https://store.playstation.com/ru-ru/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Serbia",
+      "currency": "RSD",
+      "standard_local": null,
+      "ultimate_local": null,
+      "standard_usd": null,
+      "ultimate_usd": null,
+      "status": "Unavailable",
+      "stores": [
+        {
+          "slug": "sr-rs",
+          "url": "https://store.playstation.com/sr-rs/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Taiwan",
+      "currency": "TWD",
+      "standard_local": null,
+      "ultimate_local": null,
+      "standard_usd": null,
+      "ultimate_usd": null,
+      "status": "Unavailable",
+      "stores": [
+        {
+          "slug": "en-tw",
+          "url": "https://store.playstation.com/en-tw/concept/10000730"
+        },
+        {
+          "slug": "zh-hant-tw",
+          "url": "https://store.playstation.com/zh-hant-tw/concept/10000730"
+        }
+      ]
+    },
+    {
+      "name": "Vietnam",
+      "currency": "VND",
+      "standard_local": null,
+      "ultimate_local": null,
+      "standard_usd": null,
+      "ultimate_usd": null,
+      "status": "Unavailable",
+      "stores": [
+        {
+          "slug": "en-vn",
+          "url": "https://store.playstation.com/en-vn/concept/10000730"
+        }
+      ]
+    }
+  ]
+}
